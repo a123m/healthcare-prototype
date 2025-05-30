@@ -9,15 +9,7 @@ const Dashboard = () => {
 
   return (
     <Box mt={5} textAlign='center'>
-      <Typography variant='h4'>Welcome to Dashboard</Typography>
-      <Button
-        variant='contained'
-        color='error'
-        onClick={() => dispatch(logout())}
-        sx={{ mt: 2 }}
-      >
-        Logout
-      </Button>
+      <Typography variant='h4'>Welcome to Bayer Healthcare</Typography>
       <MeetingScheduler />
     </Box>
   );

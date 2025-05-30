@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { loginApi } from '../api/auth';
 import { login } from '../store/authSlice';
 import { Button, Container, TextField, Typography, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+    e.preventDefault();
+    setLoading(true);
+    setErrorMsg('');
+
+    try {
+      const data = await loginApi(email, password);
+      console.log('Login success:', data);
+      // Save token or user data here (e.g., localStorage)
+    } catch (error) {
+      setErrorMsg(error.detail || 'Login failed');
+    } finally {
+      setLoading(false);
+    }
     dispatch(login({ role: 'admin' }));
     navigate('/dashboard');
   };
