@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { logout } from '../store/authSlice';
 import { Button, Typography, Box } from '@mui/material';
+import MeetingScheduler from '../components/MeetingScheduler';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const Dashboard = () => {
       >
         Logout
       </Button>
+      <MeetingScheduler />
     </Box>
   );
 };

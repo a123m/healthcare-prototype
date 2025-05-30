@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(login());
+    dispatch(login({ role: 'admin' }));
     navigate('/dashboard');
   };
 
