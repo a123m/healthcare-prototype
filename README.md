@@ -1,4 +1,4 @@
-"# Project Plan for Healthcare Staff Scheduling System
+"# Project Plan for Healthcare Staff Scheduling System : TEAM 5 Full Stack
 
 ## Team Members:
 
@@ -77,7 +77,7 @@ The Healthcare Staff Scheduling System is designed to optimize the scheduling of
 - **Deployment**: Docker for containerization, allowing for easy deployment and scaling of the application.
 - **CI/CD**: GitHub Actions for continuous integration and deployment, automating the testing and deployment process.
 - **Version Control**: Git for source code management, enabling collaboration and version tracking.
-- **Deployment Platform**: AWS for hosting the application, providing scalability and reliability.
+- **Deployment Platform**: GCP for hosting the application, providing scalability and reliability.
 
 ### Frontend:
 
@@ -93,7 +93,7 @@ The Healthcare Staff Scheduling System is designed to optimize the scheduling of
 - **PostgreSQL**: For the database, ensuring data integrity and efficient querying.
 - **Docker**: For containerization, allowing for easy deployment and scaling of the application.
 - **GitHub Actions**: For CI/CD, automating the testing and deployment process.
-- **AWS**: For hosting the application, providing scalability and reliability.
+- **GCP**: For hosting the application, providing scalability and reliability.
 - **Swagger**: For API documentation, making it easier for frontend developers to understand and use the backend APIs.
 
 ## Components and flow diagram:
@@ -274,20 +274,20 @@ RolePermission:
 ## Deployment Strategy:
 
 - **Docker**: Containerize the application to ensure consistency across different environments.
-- **AWS**: Deploy the application on AWS, utilizing services like Amazon ECS or EKS for orchestration and scaling.
+- **GCP**: Deploy the application on GCP, utilizing services like Cloud Run or App Engine for the backend and Cloud Storage for static files.
 - **CI/CD Pipeline**: Set up GitHub Actions to automate the build, test, and deployment processes, ensuring that changes are deployed quickly and reliably.
 - **Monitoring and Logging**: Implement monitoring and logging using Observability tools like Prometheus and Grafana to track application performance and health or using OpenTelemetry based open source tools like Sentry or Signoz.
 
 ### Frontend Deployment:
 
-- Using AWS Amplify or S3 for serving the React application.
+- Using GCP Storage for serving the React application.
 - Configure a CDN (Content Delivery Network) for faster content delivery and caching.
 
 ### Backend Deployment:
 
-- Deploy the Django application on AWS using Elastic Beanstalk or ECS.
-- Use RDS (Relational Database Service) for managing the PostgreSQL database.
-- S3 for storing static files and media.
+- Deploy the Django application on GCP using Cloud Run or App Engine.
+- Use Cloud SQL for managing the PostgreSQL database.
+- Cloud Storage for storing static files and media.
 
 ### Sprint 0:
 
